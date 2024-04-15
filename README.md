@@ -46,3 +46,20 @@ php artisan migrate
 ```bash
 php artisan db:seed
 ```
+## Testes do projeto
+
+Faça o download do Postman nesse link https://www.postman.com/ e faça a instalação dele em seu computador. Caso já tenha ele instalado abra ele para realizar os testes.
+Com o postman aberto clique no botão "Import" e selecione a opção "files", procure pela pasta "Postman" que está dentro da raíz do seu projeto e selecione o arquivo Bevi.postman_collection.json para realizar a importação da collection. Será criado uma collection com o nome "Bevi".
+
+*Verifique se o servidor está em executação, caso não esteja, abra o terminal de comando e vá até a raíz do seu projeto e execute o comando:*
+
+```
+php artisan serve
+```
+
+No Postman faça os seguintes testes:
+
+1. Dentro da Collection Bevi selecione a opção "List" e em seguida na opção "201 - Registrado com sucesso". Clique no botão "Try" para realizar o teste. O resultado do tipo JSON será exibido dentro de "Body > Pretty".
+2. Dentro da Collection Bevi selecione a opção "Save" e em seguida na opção "201 - Registrado com sucesso". Clique no botão "Try" para realizar o teste. O resultado do tipo JSON será exibido dentro de "Body > Pretty".
+3. Dentro da Collection Bevi selecione a opção "Update" e em seguida na opção "201 - Atualizado com sucesso". Clique no botão "Try" para realizar o teste. O resultado do tipo JSON será exibido dentro de "Body > Pretty".
+4. Dentro da Collection Bevi selecione a opção "Delete" e em seguida na opção "200 - Deletado com sucesso". Clique no botão "Try" para realizar o teste. O resultado do tipo JSON será exibido dentro de "Body > Pretty".
