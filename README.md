@@ -30,17 +30,18 @@ diretório criado.
 git clone https://github.com/jonasnovello/bevi.git
 ```
 
-3. Abra um terminal (Prompt de Comando, PowerShell, etc) para executar os comandos necessários para rodar o projeto. 
+3. Abra um terminal (Prompt de Comando, PowerShell, etc) para executar os comandos necessários para rodar o projeto.
 4. Acesse pelo terminal a raiz do seu projeto. (Exemplo: C:\wamp64\www\bevi).
-5. Execute o comando "php artisan serve" para iniciar o servidor.
-6. Abra o phpmyadmin através do navegador digitando essa url http://localhost/phpmyadmin/ e crie uma nova base de dados com o 
+5. Execute o comento "composer update" para instalação das bibliotecas.
+6. Execute o comando "php artisan serve" para iniciar o servidor.
+7. Abra o phpmyadmin através do navegador digitando essa url http://localhost/phpmyadmin/ e crie uma nova base de dados com o 
 nome "bevi".
-7. Acesse novamente o terminal e execute o comando abaixo para rodar as migrations de criação da tabela products:
+8. Acesse novamente o terminal e execute o comando abaixo para rodar as migrations de criação da tabela products:
 
 ```bash
 php artisan migrate
 ```
-8. Agora execute o comando abaixo para executar a seeder "ProductSeeder" e popular a tabela products:
+9. Agora execute o comando abaixo para executar a seeder "ProductSeeder" e popular a tabela products:
 
 ```bash
 php artisan db:seed
