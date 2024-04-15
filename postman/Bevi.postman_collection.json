@@ -1,0 +1,368 @@
+{
+	"info": {
+		"_postman_id": "5bf1c459-4b05-487b-882d-0a5d91c77efc",
+		"name": "Bevi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19720398"
+	},
+	"item": [
+		{
+			"name": "List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": [
+				{
+					"name": "201 - Registrado com sucesso",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Apr 2024 01:25:07 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Apr 2024 01:25:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.33"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Produtos listados com sucesso\",\n    \"data\": [\n        {\n            \"name\": \"Smartphone Samsung Galaxy A15 5G\",\n            \"description\": \"256GB 8GB RAM DSN Tela 6.5 - Azul\",\n            \"price\": \"903.00\"\n        },\n        {\n            \"name\": \"Smartphone Samsung Galaxy A34\",\n            \"description\": \"256GB 8GB RAM Dual SIM Tela 6.6 - Verde\",\n            \"price\": \"1286.00\"\n        },\n        {\n            \"name\": \"Smartphone OnePlus Nord CE 2\",\n            \"description\": \"128GB 8GB RAM Dual SIM Tela 6.43 - Cinza\",\n            \"price\": \"1470.00\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Save",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "201 - Registrado com sucesso",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/register?name=Smartphone Samsung Galaxy A34&description=5G A346M 256GB 8GB RAM Dual SIM Tela 6.6 Verde&price=1286&status=em estoque&stock_quantity=2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"register"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Smartphone Samsung Galaxy A34"
+								},
+								{
+									"key": "description",
+									"value": "5G A346M 256GB 8GB RAM Dual SIM Tela 6.6 Verde"
+								},
+								{
+									"key": "price",
+									"value": "1286"
+								},
+								{
+									"key": "status",
+									"value": "em estoque"
+								},
+								{
+									"key": "stock_quantity",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 13 Apr 2024 18:13:23 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 13 Apr 2024 18:13:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.33"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 201,\n    \"message\": \"Produto registrado com sucesso\",\n    \"data\": {\n        \"name\": \"Smartphone Samsung Galaxy A34\",\n        \"description\": \"5G A346M 256GB 8GB RAM Dual SIM Tela 6.6 Verde\",\n        \"price\": \"1286\",\n        \"status\": \"em estoque\",\n        \"stock_quantity\": \"2\",\n        \"updated_at\": \"2024-04-13T18:13:23.000000Z\",\n        \"created_at\": \"2024-04-13T18:13:23.000000Z\",\n        \"id\": 5\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "200 - Atualizado com sucesso",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Smartphone Xiaomi Redmi Note 13 Pro+\",\r\n    \"description\": \"5G Global 512GB 12GB RAM Dual SIM Tela 6.67\",\r\n    \"price\": 2063,\r\n    \"status\": \"em falta\",\r\n    \"stock_quantity\" : 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/update",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 13 Apr 2024 18:30:10 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 13 Apr 2024 18:30:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.33"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Produto atualizado com sucesso\",\n    \"data\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "200 - Deletado com sucesso",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/delete",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"delete"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 13 Apr 2024 18:34:20 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 13 Apr 2024 18:34:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.33"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Produto deletado com sucesso\"\n}"
+				}
+			]
+		}
+	]
+}
